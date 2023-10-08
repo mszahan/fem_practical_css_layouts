@@ -4,3 +4,6 @@ practical layouts of CSS with frontend masters
 
 # course website 
 https://practical.css.education/index.html
+
+# website for typography
+https://typescale.com/
