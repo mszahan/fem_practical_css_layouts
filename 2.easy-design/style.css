@@ -137,6 +137,12 @@
     /* vertical margin collapse so the bigger one will only apply */
     margin-bottom: 4rem;
   }
+
+  footer {
+    text-transform: uppercase;
+    margin-top: 5rem;
+    
+  }
   
   h1, h2, h3, h4, h5 {
     margin: 3rem 0 1.38rem;
@@ -209,8 +215,6 @@
   .star {
     width: 18px;
   }
-
-
 
 
 }
