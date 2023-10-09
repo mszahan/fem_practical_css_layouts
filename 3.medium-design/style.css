@@ -19,6 +19,7 @@
       --cyan: #7de6f4;
       --black: #050d14;
       --shadow: #050d1480;
+      --grey: #adb0c0;
 
       --gradient:linear-gradient(180deg, var(--black) 0%, var(--teal) 100%);
   
@@ -211,6 +212,66 @@
         border: var(--magenta50);
     } */
 
+}
+
+@layer album {
+
+    .album {
+        border: 2px solid var(--cyan);
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .album h2 {
+        margin: 0;
+        font-family: var(--cursive);
+        font-size: var(--h6);
+    }
+
+    .album h1 {
+        color: var(--lime);
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: var(--h4);
+        margin: 1rem 0;
+        border-collapse: collapse;
+    }
+
+    table caption {
+        visibility: collapse;
+
+    }
+
+    th,td {
+        padding: 1rem 0;
+    }
+
+    th {
+        text-align: left;
+        font-family: var(--sans-serif);
+        border-bottom: 1px solid var(--grey);
+        color: var(--grey);
+    }
+
+    td:last-of-type {
+        font-family: var(--serif);
+        color: var(--magenta);
+        font-weight: 600;
+    }
+
+
+}
+
+
+@layer tracklist {
+    table {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        font-family: var(--cursive);
+    }
 }
 
 footer svg {
