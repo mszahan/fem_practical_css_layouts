@@ -109,6 +109,33 @@
   img {
       width: 100%;
       max-width: 100%;
+      
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  blockquote{
+    margin: 0;
+    padding: 0;
+  }
+
+  cite {
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    /* negative margin doesn't apply to inlin element */
+    margin-top: -3px;
+    display: block;
+
+  }
+
+  main {
+
+    /* vertical margin collapse so the bigger one will only apply */
+    margin-bottom: 4rem;
   }
   
   h1, h2, h3, h4, h5 {
@@ -144,7 +171,7 @@
 @layer header {
   .wrapper {
     max-width: 375px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 0 auto;
   }
 
@@ -171,6 +198,17 @@
     font-size: var(--h5);
   }
 
+}
+
+
+@layer review {
+  .imggroup {
+    margin-top: 2rem;
+  }
+
+  .star {
+    width: 18px;
+  }
 
 
 
