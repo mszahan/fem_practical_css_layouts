@@ -263,5 +263,28 @@
     
   }
 
+  @media (min-width:1025px) {
+    .wrapper {
+      max-width: 1025px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 0 2rem;
+    }
+
+    main {
+      grid-area: 1 / 2 / 5 / 3;
+      /* turn the grid off to make each tour schedule to line in top 
+      of each other */
+      display: block;
+      padding-top: 8rem;
+    }
+
+
+  }
+
+
+
+
+
 
 }
