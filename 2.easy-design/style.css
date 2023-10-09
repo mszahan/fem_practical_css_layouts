@@ -199,6 +199,7 @@
     .wrapper {
       max-width: 800px;
     }
+
     
   }
 }
@@ -213,6 +214,27 @@
     font-size: var(--h5);
   }
 
+  @media (min-width:800px) {
+
+    .wrapper {
+      max-width: 800px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    main h1 {
+      /* grid-column: span 3; */
+      /* you can do this way as well */
+      /* r-start / c-start / r-end / c-end */
+      grid-area: 1 / 1 / 2 / 4;
+    }
+    
+  }
+
 }
 
 
@@ -223,6 +245,22 @@
 
   .star {
     width: 18px;
+  }
+
+
+  @media (min-width:800px) {
+
+    /* you can change the entire font size by changing the root base like this */
+    /* :root {
+      --base-size: 2rem;
+    } */
+
+    aside {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
   }
 
 
