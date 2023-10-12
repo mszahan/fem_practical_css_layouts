@@ -352,6 +352,30 @@
     }
   }
 
+  @media (min-width:1000px) {
+
+    .reviews {
+      display: block;
+      width: 200px;
+      position: relative;
+    }
+
+    .reviews figure:first-of-type,
+    .reviews figure:nth-of-type(2),
+    .reviews figure:nth-of-type(3),
+    .reviews figure:last-of-type {
+      padding: 1rem;
+    }
+
+    /* .reviews figure:nth-of-type(n) */
+    /* it selects all */
+
+    .featured-img {
+      position: relative;
+      right: 1.5rem;
+    }
+  }
+
 
 
 }

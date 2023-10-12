@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Audio Player</title>
+</head>
+<body>
+
+    <!-- forked from CSS Tricks: https://css-tricks.com/lets-create-a-custom-audio-player/
+Article explains exactly how this player was built - suggested reading for those interested!
+
+Our audio track: https://assets.codepen.io/296057/fem-bombshell.mp3
+ -->
+
+<div id="audio-player-container">
+    <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" preload="metadata" loop></audio>
+    <p>audio player ish</p>
+    <button id="play-icon"></button>
+    <span id="current-time" class="time">0:00</span>
+    <input type="range" id="seek-slider" max="100" value="0">
+    <span id="duration" class="time">0:00</span>
+    <output id="volume-output">100</output>
+    <input type="range" id="volume-slider" max="100" value="100">
+    <button id="mute-icon"></button>
+  </div>
+    
+</body>
+</html>
