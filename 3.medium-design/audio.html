@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="audio.css">
     <title>Audio Player</title>
 </head>
 <body>
@@ -17,16 +17,31 @@ Our audio track: https://assets.codepen.io/296057/fem-bombshell.mp3
  -->
 
 <div id="audio-player-container">
-    <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" preload="metadata" loop></audio>
-    <p>audio player ish</p>
-    <button id="play-icon"></button>
-    <span id="current-time" class="time">0:00</span>
-    <input type="range" id="seek-slider" max="100" value="0">
-    <span id="duration" class="time">0:00</span>
-    <output id="volume-output">100</output>
-    <input type="range" id="volume-slider" max="100" value="100">
-    <button id="mute-icon"></button>
-  </div>
+    <audio src="capital.mp3" preload="metadata" loop></audio>
     
+    <div class="name-play">
+        <p>Capital Letters</p>
+        <button id="play-icon"></button>
+        <p> Track ?</p>
+    </div>
+
+    <div class="controls">
+        <div class="play-slider">
+            <span id="current-time" class="time">0:00</span>
+            <input type="range" id="seek-slider" max="100" value="0">
+            <span id="duration" class="time">0:00</span>
+        </div>
+    
+        <div class="volume">
+            <output id="volume-output">100</output>
+            <input type="range" id="volume-slider" max="100" value="100">
+            <button id="mute-icon"></button>
+        </div>
+
+    </div>
+
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="audio.js"></script>
 </body>
 </html>
