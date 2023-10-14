@@ -1,0 +1,276 @@
+@layer base {
+    :root {
+      --base-size: 1rem;
+      --scale: 1.25;
+      --h1: calc(var(--h2) * var(--scale));
+      --h2: calc(var(--h3) * var(--scale));
+      --h3: calc(var(--h4) * var(--scale));
+      --h4: calc(var(--h5) * var(--scale));
+      --h5: calc(var(--h6) * var(--scale));
+      --h6: var(--base-size);
+  
+      /* colors */
+      --lime: #a4ffa2;
+      --magenta: #f47dda;
+      --magenta50: #f47dda80;
+      --white: #ffffff;
+      --tan: #cec5b4;
+      --teal: #2e6d81;
+      --cyan: #7de6f4;
+      --black: #050d14;
+      --shadow: #050d1480;
+      --gradient: linear-gradient(180deg, var(--black) 0%, var(--teal) 100%);
+      --grey: #adb0c0;
+  
+      /* fonts */
+      --sans-serif: "Poppins", sans-serif;
+      --serif: "Cormorant Garamond", serif;
+      --cursive: "Pacifico", cursive;
+    }
+    html {
+      box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  
+    body {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.75;
+      background: var(--gradient) no-repeat fixed;
+      color: var(--white);
+      font-size: var(--base-size);
+      margin: 0;
+      padding: 0;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 3rem 0 1.38rem;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+  
+    h1,
+    .h1 {
+      font-size: var(--h1);
+    }
+  
+    h2,
+    .h2 {
+      font-size: var(--h2);
+    }
+  
+    h3,
+    .h3 {
+      font-size: var(--h3);
+    }
+  
+    h4,
+    .h4 {
+      font-size: var(--h4);
+    }
+  
+    h5,
+    .h5 {
+      font-size: var(--h5);
+    }
+  
+    h6,
+    .h6 {
+      font-size: var(--h6);
+    }
+    a {
+      color: var(--lime);
+    }
+    a:hover {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+    main {
+      margin-bottom: 4rem;
+    }
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    blockquote {
+      margin: 0;
+      padding: 0;
+    }
+    cite {
+      font-style: normal;
+      display: block;
+      margin-top: -3px;
+    }
+    footer {
+      margin-top: 5rem;
+      text-transform: uppercase;
+    }
+  }
+
+
+
+
+@layer header {
+
+    #top h1 {
+        margin: 0;
+    }
+
+    #top h1 a {
+        font-family: var(--cursive);
+        color: var(--white);
+        font-size: var(--h3);
+        text-decoration: none;
+    }
+
+    #top h1 a:hover {
+        color: var(--magenta);
+    }
+
+    #top {
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap:1.5rem;
+        max-width: 1200px;
+        margin: 4rem 2rem;
+    }
+
+    .bandname {
+        padding-left: 1rem;
+    }
+    
+    #top nav {
+        font-family: var(--cursive);
+        color: var(--white);
+        
+    }
+    
+    #top > nav li {
+        list-style:none;
+        display:inline-block;
+        margin-left:1rem;
+    }
+    
+    
+    #fauxBody > footer span {
+        display:inline-block;
+    }
+    
+    #top nav a,
+    #fauxBody > footer a {
+        display:inline-block;
+        text-decoration:none;
+        color:var(--white);
+        transition:transform 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    
+    #top > nav a {
+        padding:0.25em 0;
+        line-height:1.3;
+    }
+    
+    #top > nav a:focus,
+    #top > nav a:hover,
+    #fauxBody > footer a:focus,
+    #fauxBody > footer a:hover {
+        color:var(--cyan);
+        /* transform:scale(1.2); */
+    }
+    
+
+    @media (max-width:700px) {
+        #mainMenuOpen {
+            display:block;
+            flex-grow:0;
+            font-size:1.8em;
+            line-height:1;
+            border:0;
+            background:transparent;
+            color:#048;
+        }
+
+        #mainMenuOpen:after {
+            content:"\2630";
+            color: var(--white);
+        }
+
+        /* + sign means the immideate sibling */
+        #mainMenuOpen + nav {
+            position:fixed;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            overflow:auto;
+            display:flex;
+            padding-top: 100px;
+            justify-content:center;
+            opacity:0;
+            background:#000D;
+            transition:left 0s 0.5s, opacity 0.5s;
+        }
+        #mainMenuOpen:focus + nav,
+        #mainMenuOpen + nav:focus-within {
+            left:0;
+            opacity:1;
+            transition:left 0s, opacity 0.5s;
+        }
+        #mainMenuOpen + nav ul {
+            display:flex;
+            flex-flow:column wrap;
+            justify-content: flex-start;
+            position:relative;
+            top:-50vh;
+            max-width:100vw;
+            min-width: 50vw;
+            margin:auto;
+            overflow:hidden;
+            transition:top 0.5s;
+        }
+        #mainMenuOpen:focus + nav ul,
+        #mainMenuOpen + nav:focus-within ul {
+            top:0;
+        }
+        #mainMenuOpen + nav li {
+            width:34%;
+            margin:0 0.5em 0.5em;
+        }
+        #mainMenuOpen + nav li:nth-child(even) {
+            margin-left:0;
+        }
+
+        #top > nav a {
+            display: block;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        #mainMenuOpen + nav ul:after {
+            content:"\1F5D9";
+            display:block;
+            position:absolute;
+            top:0;
+            right:0;
+            line-height:1;
+        }
+    }
+  }
+  
