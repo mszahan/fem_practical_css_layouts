@@ -46,7 +46,6 @@
       font-size: var(--base-size);
       margin: 0;
       padding: 0;
-      /* min-height: 1000px; */
     }
   
     p {
@@ -164,7 +163,8 @@
       justify-content: space-between;
       gap:1.5rem;
       max-width: 1200px;
-      margin: 4rem 2rem;
+      margin: 1rem 2rem;
+      padding-top: 0;
   }
 
   .bandname {
@@ -701,7 +701,7 @@
     }
   }
 
-  @media (min-width:1000px) {
+  @media (min-width:1025px) {
 
     .reviews {
       display: block;
@@ -759,10 +759,60 @@
    
 }
 
+@layer main-grid {
+  @media (max-width: 700px) {
 
-  @media (min-width: 800px) {
     .wrapper {
-      max-width: 800px;
+      min-width: 420px;
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+    
+  }
+
+  @media (min-width:1025px) {
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
+    .main-grid {
+      display: grid;
+      /* the middle auto will take all the remaining space  */
+      grid-template-columns: 200px auto 350px;
+      gap: 2rem;
+    }
+
+    .cover {
+      order: 2;
+    }
+
+    .last {
+      order: 3;
+
+    }
+
+    .album {
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+
+    .reviews {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+
+    /* .main-grid div:last-child {
+      order: 3;
+    } */
+    
   }
+}
+
+@media (min-width:701px) {
+  .wrapper {
+    min-width: 700px;
+  }
+}
+
